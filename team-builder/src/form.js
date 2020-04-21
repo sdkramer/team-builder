@@ -31,7 +31,10 @@ function MembersForm(props){
       onChange={onInputChange}
       name='role'
       type='text'/></label>
+      <br></br>
+      <button onSubmit={onSubmit}>Submit</button>
     </form>
+    
   )
 }
 
