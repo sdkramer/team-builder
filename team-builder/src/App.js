@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MembersForm from './form'
 
 const initialMembersList = {
   username:'',
   role: '',
+  email: '',
 }
 
 function App() {
@@ -14,6 +16,11 @@ function App() {
   return (
     <div className="App">
      <header><h1>Team Members</h1></header>
+     <MembersForm 
+      values={formValues}
+      onInputChange={onInputChange}
+      onSubmit={onSubmit}
+     />
     </div>
   );
 }
