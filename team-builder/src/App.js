@@ -12,6 +12,16 @@ const initialMembersList = {
 function App() {
   const [members, setMembers] = useState(initialMembersList)
 
+  const [formValues, setFormValues] = useState('')
+
+  const onInputChange = evt => {
+
+  }
+
+  const onSubmit = evt => {
+    
+  }
+
 
   return (
     <div className="App">

@@ -17,6 +17,7 @@ function MembersForm(props){
         name='username'
         type='text'/>
       </label>
+      <br></br>
       <label>Email:&nbsp;
         <input
         value={values.email}
@@ -24,6 +25,7 @@ function MembersForm(props){
         name='email'
         type='text'/>
       </label>
+      <br></br>
       <label>Role:&nbsp;<input
       value={values.role}
       onChange={onInputChange}
