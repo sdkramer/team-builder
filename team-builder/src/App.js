@@ -15,11 +15,17 @@ function App() {
   const [formValues, setFormValues] = useState('')
 
   const onInputChange = evt => {
+    const name = evt.target.name
+    const value = evt.target.value
 
+setFormValues({
+  ...formValues,
+  [name]: value
+})
   }
 
   const onSubmit = evt => {
-    
+
   }
 
 
