@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import MembersForm from './form'
+import MembersForm from './form';
+import Card from './Card';
 
 const initialMembersList = {
   username:'',
@@ -37,6 +38,7 @@ console.log('name')
       onInputChange={onInputChange}
       onSubmit={onSubmit}
      />
+     <Card />
     </div>
   );
 }
