@@ -5,10 +5,11 @@ function MembersForm(props) {
 
   return (
     <form>
-      <fieldset>
+      <fieldset className="fieldBox">
         <legend>Members Form</legend>
+        <br/>
         <label>
-          Username:&nbsp;
+          Username:<br/>
           <input
             value={values.username}
             onChange={onInputChange}
@@ -18,7 +19,7 @@ function MembersForm(props) {
         </label>
         <br></br>
         <label>
-          Email:&nbsp;
+          Email:<br/>
           <input
             value={values.email}
             onChange={onInputChange}
@@ -28,7 +29,7 @@ function MembersForm(props) {
         </label>
         <br></br>
         <label>
-          Role:&nbsp;
+          Role:<br/>
           <input
             value={values.role}
             onChange={onInputChange}
@@ -36,7 +37,8 @@ function MembersForm(props) {
             type="text"
           />
         </label>
-        <br></br>
+        <br/>
+        <br/>
         <button onSubmit={onSubmit}>Submit</button>
       </fieldset>
     </form>

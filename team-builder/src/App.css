@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.fieldBox {
+  max-width: 60%;
+  text-align: left;
+}
