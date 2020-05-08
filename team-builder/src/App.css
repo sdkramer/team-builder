@@ -42,3 +42,21 @@
   text-align: left;
   margin: 4%;
 }
+
+.member-list {
+ 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .member-card {
+    margin: 5%;
+    width: 20%;
+    border: 1px solid rgb(41, 23, 15);
+    background-color: rgb(252, 247, 240);
+    color: rgb(9, 2, 2);
+    box-shadow:2px 6px 10px #acabab;
+    text-align: left;
+    padding: 9px;
+  }
