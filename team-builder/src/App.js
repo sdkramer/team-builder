@@ -4,41 +4,39 @@ import logo from './logo.svg';
 import MembersForm from './form';
 import MemberCard from './MemberCard';
 
-const initialMembersList = {
-  id: '',
-  username:'',
-  email: '',
-  role: '',
-}
+
 
 function App() {
-  const [members, setMembers] = useState(initialMembersList)
+  const [members, setMembers] = useState([
+    {
+      id: '0',
+      username:'sean',
+      email: '',
+      role: '',
+    },
+  ]);
 
-  const [formValues, setFormValues] = useState('')
+//   const [formValues, setFormValues] = useState('')
 
-  const onInputChange = evt => {
-    const name = evt.target.name
-    const value = evt.target.value
+//   const onInputChange = evt => {
+//     const name = evt.target.name
+//     const value = evt.target.value
 
-setFormValues({
-  ...formValues,
-  [name]: value
-})
-  }
+// setFormValues({
+//   ...formValues,
+//   [name]: value
+// })
+//   }
 
-  const onSubmit = evt => {
-console.log('name')
-  }
+//   const onSubmit = evt => {
+// console.log('name')
+//   }
 
 
   return (
     <div className="App">
      <header><h1>Team Members</h1></header>
-     <MembersForm 
-      values={formValues}
-      onInputChange={onInputChange}
-      onSubmit={onSubmit}
-     />
+     <MembersForm />
      <MemberCard members={members}/>
     </div>
   );

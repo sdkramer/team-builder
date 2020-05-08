@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-function MemberCard(){
-return(
-  <div className='members-list'>
-    <div className='member-card'>
-    <h5>Welcome to our team!</h5>
-    <p>Name: </p>
-    <p>Email: </p>
-    <p>Role: </p>
+function MemberCard(props) {
+  return (
+    <div className="members-list">
+      {props.members.map((member) => (
+        <div className="member-card" key={member.id}>
+          <h5>Welcome to our team!</h5>
+          <p>Name: {member.username}</p>
+          <p>Email: {member.email}</p>
+          <p>Role: {member.role}</p>
+        </div>
+      ))}
     </div>
-
-
-  </div>
-
-)
-
+  );
 }
 
 export default MemberCard;

@@ -1,39 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
+
+const submitForm = event => {
+  event.preventDefault()
+
+}
 
 function MembersForm(props) {
-  const { onInputChange, onSubmit, values } = props;
+
+  const [member, setMember]=useState({
+    username: '',
+    email: '',
+    role: '',
+  })
+
+  const handleChanges = event => {
+    setMember({...member, [event.target.name] : event.target.value})
+    console.log(member)
+  }
 
   return (
-    <form>
+    <form onSubmit={submitForm}>
       <fieldset className="fieldBox">
         <legend>Members Form</legend>
         <br />
-        <label>
+        <label htmlFor='username'>
           Username:
           <br />
           <input
-            value={values.username}
-            onChange={onInputChange}
+            value={member.username}
+            onChange={handleChanges}
             name="username"
             type="text"
           />
         </label>
         <br></br>
-        <label>
+        <label htmlFor='email'>
           Email:
           <br />
           <input
-            value={values.email}
-            onChange={onInputChange}
+            value={member.email}
+            onChange={handleChanges}
             name="email"
             type="text"
           />
         </label>
         <br></br>
-        <label>
+        <label htmlFor='role'>
           Role:
           <br />
-          <input list="roles" name="role" />
+          <input list="roles" name="role" onChange={handleChanges} value={member.role}/>
           <datalist id="roles">
             <option value="Front end developer" />
             <option value="Back end developer" />
@@ -43,7 +58,7 @@ function MembersForm(props) {
         </label>
         <br />
         <br />
-        <button onSubmit={onSubmit}>Submit</button>
+        <button type='submit'>Submit</button>
       </fieldset>
     </form>
   );
