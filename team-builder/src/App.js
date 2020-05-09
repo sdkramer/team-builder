@@ -16,6 +16,16 @@ function App() {
     },
   ]);
 
+  const addNewMember = member => {
+    const newMember = {
+      id: Date.now(),
+      username: member.username,
+      email: member.email,
+      role: member.role
+    };
+    setMembers([...members, newMember])
+  }
+
 //   const [formValues, setFormValues] = useState('')
 
 //   const onInputChange = evt => {
@@ -36,7 +46,7 @@ function App() {
   return (
     <div className="App">
      <header><h1>Team Members</h1></header>
-     <MembersForm />
+     <MembersForm addNewMember={addNewMember}/>
      <MemberCard members={members}/>
     </div>
   );

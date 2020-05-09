@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 
-const submitForm = event => {
-  event.preventDefault()
-
-}
 
 function MembersForm(props) {
 
@@ -16,6 +12,12 @@ function MembersForm(props) {
   const handleChanges = event => {
     setMember({...member, [event.target.name] : event.target.value})
     console.log(member)
+  }
+
+  const submitForm = event => {
+    event.preventDefault()
+    props.addNewMember(member)
+    setMember({username: '', email: '', role: ''})
   }
 
   return (
