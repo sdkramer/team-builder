@@ -8,12 +8,12 @@ import MemberCard from './MemberCard';
 
 function App() {
   const [members, setMembers] = useState([
-    {
-      id: '0',
-      username:'sean',
-      email: '',
-      role: '',
-    },
+    // {
+    //   id: '',
+    //   username:'',
+    //   email: '',
+    //   role: '',
+    // },
   ]);
 
   const addNewMember = member => {

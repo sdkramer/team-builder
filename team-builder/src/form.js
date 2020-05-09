@@ -36,6 +36,7 @@ function MembersForm(props) {
           />
         </label>
         <br></br>
+        <br />
         <label htmlFor='email'>
           Email:
           <br />
@@ -47,6 +48,7 @@ function MembersForm(props) {
           />
         </label>
         <br></br>
+        <br />
         <label htmlFor='role'>
           Role:
           <br />
@@ -58,6 +60,7 @@ function MembersForm(props) {
             <option value="UI designer" />
           </datalist>
         </label>
+        <br />
         <br />
         <br />
         <button type='submit'>Submit</button>
