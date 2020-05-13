@@ -11,13 +11,19 @@ function MembersForm(props) {
 
   const handleChanges = event => {
     setMember({...member, [event.target.name] : event.target.value})
-    console.log(member)
+    // console.log(member)
   }
 
   const submitForm = event => {
+    console.log(member.username)
     event.preventDefault()
-    props.addNewMember(member)
-    setMember({username: '', email: '', role: ''})
+    if (member.username === '' || member.email === '' || member.role == ''){
+alert('Please complete all inputs')
+    }else {
+      props.addNewMember(member)
+      setMember({username: '', email: '', role: ''})
+    }
+  
   }
 
   return (
